@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="registerfiletb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="registerfiletb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="147900001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="59"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/registerfiletb/regout0" type="array">
+      <obj_property name="ElementShortName">regout0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout1" type="array">
+      <obj_property name="ElementShortName">regout1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout2" type="array">
+      <obj_property name="ElementShortName">regout2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout3" type="array">
+      <obj_property name="ElementShortName">regout3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout4" type="array">
+      <obj_property name="ElementShortName">regout4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout5" type="array">
+      <obj_property name="ElementShortName">regout5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout6" type="array">
+      <obj_property name="ElementShortName">regout6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/regout7" type="array">
+      <obj_property name="ElementShortName">regout7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regout7[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/src_enable" type="array">
+      <obj_property name="ElementShortName">src_enable[2:0]</obj_property>
+      <obj_property name="ObjectShortName">src_enable[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/des_enable" type="array">
+      <obj_property name="ElementShortName">des_enable[2:0]</obj_property>
+      <obj_property name="ObjectShortName">des_enable[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/data_src" type="logic">
+      <obj_property name="ElementShortName">data_src</obj_property>
+      <obj_property name="ObjectShortName">data_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/registerfiletb/data" type="array">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+   </wvobject>
+</wave_config>

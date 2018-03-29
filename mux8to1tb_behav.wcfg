@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mux8to1tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="mux8to1tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="130800001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/mux8to1tb/In0" type="array">
+      <obj_property name="ElementShortName">In0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In1" type="array">
+      <obj_property name="ElementShortName">In1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In2" type="array">
+      <obj_property name="ElementShortName">In2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In3" type="array">
+      <obj_property name="ElementShortName">In3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In4" type="array">
+      <obj_property name="ElementShortName">In4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In5" type="array">
+      <obj_property name="ElementShortName">In5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In6" type="array">
+      <obj_property name="ElementShortName">In6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/In7" type="array">
+      <obj_property name="ElementShortName">In7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In7[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/Z" type="array">
+      <obj_property name="ElementShortName">Z[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Z[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux8to1tb/enable" type="array">
+      <obj_property name="ElementShortName">enable[2:0]</obj_property>
+      <obj_property name="ObjectShortName">enable[2:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/14/2018 04:47:54 PM
+-- Create Date: 03/08/2018 02:05:35 PM
 -- Design Name: 
--- Module Name: Register_file - Behavioral
+-- Module Name: mod_regfile - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,28 +31,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Register_file is
-    Port ( src_s0 : in STD_LOGIC;
-           src_s1 : in STD_LOGIC;
-           src_s2 : in STD_LOGIC;
-           des_A0 : in STD_LOGIC;
-           des_A1 : in STD_LOGIC;
-           des_A2 : in STD_LOGIC;
+entity mod_regfile is
+Port ( 
+           src_A : in STD_LOGIC_Vector(2 downto 0);
+           src_B : in STD_LOGIC_Vector(2 downto 0);
+           resA : out STD_LOGIC_VECTOR(15 downto 0);
+           resB : out STD_LOGIC_VECTOR(15 downto 0);
+           des_A : in STD_LOGIC_Vector(2 downto 0);
+           RW:in STD_LOGIC;
            Clk : in STD_LOGIC;
            data_src : in STD_LOGIC;
            data : in STD_LOGIC_VECTOR(15 downto 0);
-           regout0 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout1 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout2 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout3 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout4 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout5 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout6 : out STD_LOGIC_VECTOR(15 downto 0);
-           regout7 : out STD_LOGIC_VECTOR(15 downto 0)
+           src_reg: in STD_LOGIC_VECTOR(15 downto 0)
+           
          );
-end Register_file;
+end mod_regfile;
 
-architecture Behavioral of Register_file is
+architecture Behavioral of mod_regfile is
     COMPONENT reg4
     PORT(
     D : IN std_logic_vector(15 downto 0);
@@ -106,9 +101,18 @@ architecture Behavioral of Register_file is
     END COMPONENT;
     
     signal load_reg0, load_reg1, load_reg2, load_reg3, load_reg4, load_reg5, load_reg6, load_reg7 : std_logic;
-    signal reg0_q, reg1_q, reg2_q, reg3_q,reg4_q, reg5_q, reg6_q, reg7_q,
-    data_src_mux_out, src_reg : std_logic_vector(15 downto 0);
+    signal load_reg0x, load_reg1x, load_reg2x, load_reg3x, load_reg4x, load_reg5x, load_reg6x, load_reg7x : std_logic;
+    signal reg0_q, reg1_q, reg2_q, reg3_q,reg4_q, reg5_q, reg6_q, reg7_q,data_src_mux_out : std_logic_vector(15 downto 0);
 begin
+    load_reg0 <= load_reg0x and RW;
+    load_reg1 <= load_reg1x and RW;
+    load_reg2 <= load_reg2x and RW;
+    load_reg3 <= load_reg3x and RW;
+    load_reg4 <= load_reg4x and RW;
+    load_reg5 <= load_reg5x and RW;
+    load_reg6 <= load_reg6x and RW;
+    load_reg7 <= load_reg7x and RW;
+    
     reg00: reg4 PORT MAP(
     D => data_src_mux_out,
     load => load_reg0,
@@ -172,17 +176,17 @@ begin
     
  -- Destination register decoder
     des_decoder_3to8: decoder3to8 PORT MAP(
-    A0 => des_A0,
-    A1 => des_A1,
-    A2 => des_A2,
-    Q0 => load_reg0,
-    Q1 => load_reg1,
-    Q2 => load_reg2,
-    Q3 => load_reg3,
-    Q4 => load_reg4,
-    Q5 => load_reg5,
-    Q6 => load_reg6,
-    Q7 => load_reg7
+    A0 => des_A(0),
+    A1 => des_A(1),
+    A2 => des_A(2),
+    Q0 => load_reg0x,
+    Q1 => load_reg1x,
+    Q2 => load_reg2x,
+    Q3 => load_reg3x,
+    Q4 => load_reg4x,
+    Q5 => load_reg5x,
+    Q6 => load_reg6x,
+    Q7 => load_reg7x
     );     
 
 -- 2 to 1 Data source multiplexer
@@ -194,7 +198,7 @@ begin
     );
    
 -- 4 to 1 source register multiplexer
-    Inst_mux8to1: mux8to1 PORT MAP(
+    Inst_mux8to1A: mux8to1 PORT MAP(
     In0 => reg0_q,
     In1 => reg1_q,
     In2 => reg2_q,
@@ -203,19 +207,26 @@ begin
     In5 => reg5_q,
     In6 => reg6_q,
     In7 => reg7_q,
-    S0 => src_s0,
-    S1 => src_s1,
-    S2 => src_s2,
-    Z => src_reg
+    S0 => src_A(0),
+    S1 => src_A(1),
+    S2 => src_A(2),
+    Z => resA
     );
     
-    regout0 <= reg0_q;
-    regout1 <= reg1_q;
-    regout2 <= reg2_q;
-    regout3 <= reg3_q;
-    regout4 <= reg4_q;
-    regout5 <= reg5_q;
-    regout6 <= reg6_q;
-    regout7 <= reg7_q;
+    Inst_mux8to1B: mux8to1 PORT MAP(
+    In0 => reg0_q,
+    In1 => reg1_q,
+    In2 => reg2_q,
+    In3 => reg3_q,
+    In4 => reg4_q,
+    In5 => reg5_q,
+    In6 => reg6_q,
+    In7 => reg7_q,
+    S0 => src_B(0),
+    S1 => src_B(1),
+    S2 => src_B(2),
+    Z => resB
+    );
+
 
 end Behavioral;

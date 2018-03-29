@@ -1,0 +1,4 @@
+Running: xsim.dir/onebit_autb_behav/xsimk.exe -simmode gui -wdb onebit_autb_behav.wdb -simrunnum 0 -socket 50521
+Design successfully loaded
+Design Loading Memory Usage: 6908 KB (Peak: 6908 KB)
+Design Loading CPU Usage: 30 ms
