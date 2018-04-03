@@ -44,7 +44,7 @@ architecture Behavioral of extend is
 begin
     output(5 downto 3) <= DR;
 	output(2 downto 0) <= SB;
-	output(15 downto 6) <= "0" when DR(2) = '0' else "111111111111111";
+	output(15 downto 6) <= "0000000000" when DR(2) = '0' else "1111111111";
 
 
 end Behavioral;

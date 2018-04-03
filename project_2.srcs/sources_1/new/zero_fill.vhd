@@ -42,5 +42,5 @@ architecture Behavioral of zero_fill is
 
 begin
     output(2 downto 0) <= input;
-    output(15 downto 3) <= "0";
+    output(15 downto 3) <= "0000000000000";
 end Behavioral;

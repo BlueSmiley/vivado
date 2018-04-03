@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f74b4128c8a2408da050dfb0eb9bbab4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot onebit_alutb_behav xil_defaultlib.onebit_alutb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f74b4128c8a2408da050dfb0eb9bbab4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot CARtb_behav xil_defaultlib.CARtb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,11 +10,15 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.reg4 [reg4_default]
 Compiling architecture behavioral of entity xil_defaultlib.onebit_mux2to1 [onebit_mux2to1_default]
 Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
 Compiling architecture behavioral of entity xil_defaultlib.onebit_au [onebit_au_default]
 Compiling architecture behavioral of entity xil_defaultlib.onebit_4to1mux [onebit_4to1mux_default]
 Compiling architecture behavioral of entity xil_defaultlib.onebit_lu [onebit_lu_default]
 Compiling architecture behavioral of entity xil_defaultlib.onebit_alu [onebit_alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.onebit_alutb
-Built simulation snapshot onebit_alutb_behav
+Compiling architecture behavioral of entity xil_defaultlib.alu_16bit [alu_16bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux2to1 [mux2to1_default]
+Compiling architecture behavioral of entity xil_defaultlib.CAR [car_default]
+Compiling architecture behavioral of entity xil_defaultlib.cartb
+Built simulation snapshot CARtb_behav
